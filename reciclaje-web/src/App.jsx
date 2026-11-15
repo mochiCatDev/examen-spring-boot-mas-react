@@ -57,50 +57,50 @@ function App() {
   };
 
   return (
-    <div>
+    <div className="app-container">
       <h1>Gestión de Puntos de Reciclaje Urbano</h1>
 
-      <form onSubmit={manejarSubmit}>
+      <form onSubmit={manejarSubmit} className="form-container">
         <h3>Agregar Nuevo Punto</h3>
-        <input
-          type="text"
-          name="nombre"
-          placeholder="Nombre del punto"
-          value={form.nombre}
-          onChange={manejarChange}
-          required
+        <input 
+          type="text" 
+          name="nombre" 
+          placeholder="Nombre del punto" 
+          value={form.nombre} 
+          onChange={manejarChange} 
+          required 
         />
-        <input
-          type="text"
-          name="sector"
-          placeholder="Sector o barrio"
-          value={form.sector}
-          onChange={manejarChange}
-          required
+        <input 
+          type="text" 
+          name="sector" 
+          placeholder="Sector o barrio" 
+          value={form.sector} 
+          onChange={manejarChange} 
+          required 
         />
-        <input
-          type="text"
-          name="material"
-          placeholder="Material que recibe"
-          value={form.material}
-          onChange={manejarChange}
-          required
+        <input 
+          type="text" 
+          name="material" 
+          placeholder="Material que recibe" 
+          value={form.material} 
+          onChange={manejarChange} 
+          required 
         />
-        <input
-          type="number"
-          name="capacidad"
-          placeholder="Capacidad (unidades)"
-          value={form.capacidad}
-          onChange={manejarChange}
-          required
+        <input 
+          type="number" 
+          name="capacidad" 
+          placeholder="Capacidad (unidades)" 
+          value={form.capacidad} 
+          onChange={manejarChange} 
+          required 
         />
-        <button type="submit">
+        <button type="submit" className="btn-submit">
           Guardar Punto
         </button>
       </form>
 
       <h2>Listado de Puntos Existentes</h2>
-      <div>
+      <div className="grid-cards">
         {puntos.map((punto) => (
           <PuntoCard key={punto.id} punto={punto} />
         ))}
